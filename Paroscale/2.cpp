@@ -8,7 +8,7 @@ void countFilesAndDir(const filesystem::path& dirPath, int& fileCount, int& dirC
             fileCount++;
         } else if (entry.is_directory()) {
             dirCount++;
-            countFilesAndDirectories(entry.path(), fileCount, dirCount);
+            countFilesAndDir(entry.path(), fileCount, dirCount);
         }
     }
 }
